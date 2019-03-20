@@ -1,0 +1,286 @@
+{
+  "code": 0,
+  "message": "操作成功 ！",
+  "data": {
+    "meta": {
+      "views": 107,
+      "likes": 9,
+      "comments": 8
+    },
+    "keyword": ["github 授权登录教程", "如何设计第三方授权登录的用户表"],
+    "desc": "需求：在网站上想评论一篇文章，而评论文章是要用户注册与登录的，那么怎么免去这麻烦的步骤呢？答案是通过第三方授权登录。本文讲解的就是 github 授权登录的教程。",
+    "numbers": "11191",
+    "img_url": "https://upload-images.jianshu.io/upload_images/12890819-35e7fa768330ae28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+    "type": 1,
+    "state": 1,
+    "origin": 0,
+    "tags": [{
+      "_id": "5bf405e1245730373274df55",
+      "name": "react.js",
+      "desc": "react.js",
+      "create_time": "2018-11-20T13:02:25.360Z",
+      "update_time": "2018-11-20T13:02:25.360Z",
+      "id": 16,
+      "__v": 0
+    }, {
+      "_id": "5bf013c2bc1e7805eb83db9b",
+      "name": "express",
+      "desc": "express",
+      "create_time": "2018-11-17T13:12:34.868Z",
+      "update_time": "2018-11-17T13:12:34.868Z",
+      "id": 5,
+      "__v": 0
+    }, {
+      "_id": "5bf013bbbc1e7805eb83db9a",
+      "name": "node",
+      "desc": "node",
+      "create_time": "2018-11-17T13:12:27.207Z",
+      "update_time": "2018-11-17T13:12:27.207Z",
+      "id": 4,
+      "__v": 0
+    }],
+    "comments": [{
+      "user": {
+        "name": "1207915357",
+        "type": 2,
+        "avatar": "https://avatars0.githubusercontent.com/u/32265147?v=4",
+        "user_id": "5c7ca0b842b55e2ecc90976e"
+      },
+      "is_top": false,
+      "likes": 0,
+      "state": 1,
+      "is_handle": 1,
+      "_id": "5c7ca0c942b55e2ecc90976f",
+      "article_id": "5c7bd34e42b55e2ecc90976d",
+      "content": "厉害",
+      "user_id": "5c7ca0b842b55e2ecc90976e",
+      "other_comments": [],
+      "create_time": "2019-03-04T03:51:38.000Z",
+      "update_time": "2019-03-04T03:51:38.000Z",
+      "id": 71,
+      "__v": 0
+    }, {
+      "user": {
+        "name": "1207915357",
+        "type": 2,
+        "avatar": "https://avatars0.githubusercontent.com/u/32265147?v=4",
+        "user_id": "5c7ca0b842b55e2ecc90976e"
+      },
+      "is_top": false,
+      "likes": 0,
+      "state": 1,
+      "is_handle": 1,
+      "_id": "5c7ca0df42b55e2ecc909770",
+      "article_id": "5c7bd34e42b55e2ecc90976d",
+      "content": "不能获取到头像吗\n",
+      "user_id": "5c7ca0b842b55e2ecc90976e",
+      "other_comments": [{
+        "user": {
+          "name": "biaochenxuying",
+          "type": 2,
+          "avatar": "https://avatars3.githubusercontent.com/u/24362914?v=4",
+          "user_id": "5c7a8f3ff6ebf42bf648e672"
+        },
+        "to_user": {
+          "name": "1207915357",
+          "type": 2,
+          "avatar": "https://avatars0.githubusercontent.com/u/32265147?v=4",
+          "user_id": "5c7ca0b842b55e2ecc90976e"
+        },
+        "likes": 0,
+        "state": 1,
+        "create_time": "2019-03-04T04:40:19.766Z",
+        "_id": "5c7cac3342b55e2ecc909771",
+        "content": "忘记要显示头像了，现在可以了。"
+      }],
+      "create_time": "2019-03-04T03:51:59.353Z",
+      "update_time": "2019-03-04T03:51:59.353Z",
+      "id": 72,
+      "__v": 0
+    }, {
+      "user": {
+        "name": "jly",
+        "type": 1,
+        "avatar": "user",
+        "user_id": "5c7f2b88c4db5c04d6181663"
+      },
+      "is_top": false,
+      "likes": 0,
+      "state": 1,
+      "is_handle": 2,
+      "_id": "5c7f2defc4db5c04d6181664",
+      "article_id": "5c7bd34e42b55e2ecc90976d",
+      "content": "en",
+      "user_id": "5c7f2b88c4db5c04d6181663",
+      "other_comments": [{
+        "user": {
+          "name": "xbmchina",
+          "type": 2,
+          "avatar": "https://avatars3.githubusercontent.com/u/14942293?v=4",
+          "user_id": "5c7a8ff7f6ebf42bf648e674"
+        },
+        "to_user": {
+          "name": "jly",
+          "type": 1,
+          "avatar": "user",
+          "user_id": "5c7f2b88c4db5c04d6181663"
+        },
+        "likes": 0,
+        "state": 1,
+        "create_time": "2019-03-15T13:22:23.780Z",
+        "_id": "5c8ba70fb87b8a04f1860c91",
+        "content": "eeeeee"
+      }, {
+        "user": {
+          "name": "xbmchina",
+          "type": 2,
+          "avatar": "https://avatars3.githubusercontent.com/u/14942293?v=4",
+          "user_id": "5c7a8ff7f6ebf42bf648e674"
+        },
+        "to_user": {
+          "name": "jly",
+          "type": 1,
+          "avatar": "user",
+          "user_id": "5c7f2b88c4db5c04d6181663"
+        },
+        "likes": 0,
+        "state": 1,
+        "create_time": "2019-03-15T13:22:25.620Z",
+        "_id": "5c8ba711b87b8a04f1860c93",
+        "content": "eeeeee"
+      }, {
+        "user": {
+          "name": "xbmchina",
+          "type": 2,
+          "avatar": "https://avatars3.githubusercontent.com/u/14942293?v=4",
+          "user_id": "5c7a8ff7f6ebf42bf648e674"
+        },
+        "to_user": {
+          "name": "xbmchina",
+          "type": 2,
+          "avatar": "https://avatars3.githubusercontent.com/u/14942293?v=4",
+          "user_id": "5c7a8ff7f6ebf42bf648e674"
+        },
+        "likes": 0,
+        "state": 1,
+        "create_time": "2019-03-15T13:22:38.072Z",
+        "_id": "5c8ba71eb87b8a04f1860c96",
+        "content": "eeeeeee"
+      }],
+      "create_time": "2019-03-06T02:18:23.831Z",
+      "update_time": "2019-03-06T02:18:23.831Z",
+      "id": 75,
+      "__v": 0
+    }, {
+      "user": {
+        "name": "D.Luck",
+        "type": 1,
+        "avatar": "user",
+        "user_id": "5c706f3b65ccc85fa0125e98"
+      },
+      "is_top": false,
+      "likes": 0,
+      "state": 1,
+      "is_handle": 1,
+      "_id": "5c884d545cba0a1b169010f3",
+      "article_id": "5c7bd34e42b55e2ecc90976d",
+      "content": "6",
+      "user_id": "5c706f3b65ccc85fa0125e98",
+      "other_comments": [],
+      "create_time": "2019-03-13T00:22:44.531Z",
+      "update_time": "2019-03-13T00:22:44.531Z",
+      "id": 78,
+      "__v": 0
+    }],
+    "category": [{
+      "desc": "javaScript",
+      "_id": "5bf014e8bc1e7805eb83dba7",
+      "name": "javaScript",
+      "create_time": "2018-11-17T13:17:28.907Z",
+      "update_time": "2018-11-17T13:17:28.907Z",
+      "id": 1,
+      "__v": 0
+    }],
+    "_id": "5c7bd34e42b55e2ecc90976d",
+    "title": "github 授权登录教程与如何设计第三方授权登录的用户表",
+    "author": "biaochenxuying",
+    "content": "\n![效果图](https://upload-images.jianshu.io/upload_images/12890819-1a1fd5e2d4f63096.gif?imageMogr2/auto-orient/strip)\n\n需求：在网站上想评论一篇文章，而评论文章是要用户注册与登录的，那么怎么免去这麻烦的步骤呢？答案是通过第三方授权登录。本文讲解的就是 github 授权登录的教程。\n\n效果体验地址：[ http://biaochenxuying.cn](http://biaochenxuying.cn)\n\n\n# 1. github 第三方授权登录教程\n\n先来看下 github 授权的完整流程图 1：\n\n![github 1](https://upload-images.jianshu.io/upload_images/12890819-d29b861c55a6833d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n或者看下 github 授权的完整流程图 2：\n\n![github 2](https://upload-images.jianshu.io/upload_images/12890819-35e7fa768330ae28.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n## 1.1 申请一个 OAuth App\n\n**首先我们必须登录上 github 申请一个 OAuth App，步骤如下：**\n\n1. 登录 github\n2. 点击头像下的 Settings -> Developer settings 右侧 New OAuth App\n3. 填写申请 app 的相关配置，重点配置项有2个\n4. Homepage URL 这是后续需要使用授权的 URL ，你可以理解为就是你的项目根目录地址\n5. Authorization callback URL 授权成功后的回调地址，这个至关重要，这是拿到授权 code 时给你的回调地址。\n\n**具体实践如下：**\n\n- 1. 首先登录你的 GitHub 账号，然后点击进入Settings。\n\n![](https://upload-images.jianshu.io/upload_images/12890819-780fe06c4053c80d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n- 2. 点击 OAuth Apps , Register a new application 或者 New OAuth App 。\n\n![](https://upload-images.jianshu.io/upload_images/12890819-f1a48fc621c54c4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n- 3. 输入信息。\n\n![image.png](https://upload-images.jianshu.io/upload_images/12890819-31f643b581b15def.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n- 4. 应用信息说明。\n\n![](https://upload-images.jianshu.io/upload_images/12890819-ad08dba742084d52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n流程也可看 GitHub 设置的官方文档-[Registering OAuth Apps](https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/registering-oauth-apps/)。\n\n## 1.2 授权登录\n\ngithub 文档：[building-oauth-apps/authorizing-oauth-apps](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)\n\n授权登录的主要 3 个步骤： \n\n- 1. web 端重定向 http://github.com/login/oauth/authorize\n- 2. 根据 code 获取 access_token \n- 3. 根据 access_token 获取用户信息\n\n笔者这次实践中，项目是采用前后端分离的，所以第 1 步在前端实现，而第 2 步和第 3 步是在后端实现的，因为第 2 个接口里面需要Client_secret 这个参数，而且第 3 步获取的用户信息在后端保存到数据库。\n\n\n## 1.3. 代码实现\n\n### 1.3.1 前端\n\n笔者项目的技术是 react。\n\n```\n// config.js\n\n// ***** 处请填写你申请的 OAuth App 的真实内容\n const config = {\n  'oauth_uri': 'https://github.com/login/oauth/authorize',\n  'redirect_uri': 'http://biaochenxuying.cn/',\n  'client_id': '*****',\n  'client_secret': '*******',\n};\n\n// 本地开发环境下\nif (process.env.NODE_ENV === 'development') {\n  config.redirect_uri = \"http://localhost:3001/\"\n  config.client_id = \"******\"\n  config.client_secret = \"*****\"\n}\nexport default config; \n```\n[代码参考 config.js ](https://github.com/biaochenxuying/blog-react/blob/master/src/utils/config.js)\n\nredirect_uri 回调地址是分环境的，所以我是新建了两个 OAuth App 的，一个用于线上生产环境，一个用于本地开发环境。\n\n一般来说，登录的页面应该是独立的，对应相应的路由 /login , 但是本项目的登录 login 组件是 nav 组件的子组件，nav 是个全局用的组件, 所以回调地址就写了 http://biaochenxuying.cn/。\n\n- 所以点击跳转是写在 login.js 里面；\n- 授权完拿到 code 后，是写在 nav.js 里面\n- nav.js 拿到 code 值后去请求后端接口，后端接口返回用户信息。\n- 其中后端拿到 code 还要去 github 取 access_token ，再根据 access_token 去取 github 取用户的信息。\n\n```\n// login.js\n\n// html\n<Button\n    style={{ width: '100%' }}\n    onClick={this.handleOAuth} >\n      github 授权登录\n</Button>\n\n// js\nhandleOAuth(){\n    // 保存授权前的页面链接\n    window.localStorage.preventHref = window.location.href\n    // window.location.href = 'https://github.com/login/oauth/authorize?client_id=***&redirect_uri=http://biaochenxuying.cn/'\n    window.location.href = `${config.oauth_uri}?client_id=${config.client_id}&redirect_uri=${config.redirect_uri}`\n}\n```\n[代码参考 login.js ](https://github.com/biaochenxuying/blog-react/blob/master/src/components/login/login.js)\n\n```\n// nav.js\n\ncomponentDidMount() {\n    // console.log('code :', getQueryStringByName('code'));\n    const code = getQueryStringByName('code')\n    if (code) {\n      this.setState(\n        {\n          code\n        },\n        () => {\n          if (!this.state.code) {\n            return;\n          }\n          this.getUser(this.state.code);\n        },\n      );\n    }\n  }\n\ncomponentWillReceiveProps(nextProps) {\n    const code = getQueryStringByName('code')\n    if (code) {\n      this.setState(\n        {\n          code\n        },\n        () => {\n          if (!this.state.code) {\n            return;\n          }\n          this.getUser(this.state.code);\n        },\n      );\n    }\n  }\n  getUser(code) {\n    https\n      .post(\n        urls.getUser,\n        {\n          code,\n        },\n        { withCredentials: true },\n      )\n      .then(res => {\n        // console.log('res :', res.data);\n        if (res.status === 200 && res.data.code === 0) {\n          this.props.loginSuccess(res.data);\n          let userInfo = {\n            _id: res.data.data._id,\n            name: res.data.data.name,\n          };\n          window.sessionStorage.userInfo = JSON.stringify(userInfo);\n          message.success(res.data.message, 1);\n          this.handleLoginCancel();\n          // 跳转到之前授权前的页面\n          const href = window.localStorage.preventHref\n          if(href){\n            window.location.href = href \n          }\n        } else {\n          this.props.loginFailure(res.data.message);\n          message.error(res.data.message, 1);\n        }\n      })\n      .catch(err => {\n        console.log(err);\n      });\n  }\n```\n[参考 nav.js ](https://github.com/biaochenxuying/blog-react/blob/master/src/components/nav/nav.js)\n\n### 1.3.2 后端\n\n笔者项目的后端采用的技术是 node.js 和 express。\n\n- **后端拿到前端传来的 code 后，还要去 github 取 access_token ，再根据 access_token 去取 github 取用户的信息。**\n- **然后把要用到的用户信息通过 注册 的方式保存到数据库，然后返回用户信息给前端。**\n\n```\n// app.config.js\n\nexports.GITHUB = {\n\toauth_uri: 'https://github.com/login/oauth/authorize',\n\taccess_token_url: 'https://github.com/login/oauth/access_token',\n\t// 获取 github 用户信息 url // eg: https://api.github.com/user?access_token=******&scope=&token_type=bearer\n\tuser_url: 'https://api.github.com/user',\n\n\t// 生产环境\n    redirect_uri: 'http://biaochenxuying.cn/',\n    client_id: '*****',\n    client_secret: '*****',\n\n\t// // 开发环境\n\t// redirect_uri: \"http://localhost:3001/\",\n    // client_id: \"*****\",\n\t// client_secret: \"*****\",\n};\n```\n[代码参考 app.config.js ](https://github.com/biaochenxuying/blog-node/blob/master/app.config.js)\n\n```\n// 路由文件  user.js\n\nconst fetch = require('node-fetch');\nconst CONFIG = require('../app.config.js');\nconst User = require('../models/user');\n\n// 第三方授权登录的用户信息\nexports.getUser = (req, res) => {\n  let { code } = req.body;\n  if (!code) {\n    responseClient(res, 400, 2, 'code 缺失');\n    return;\n  }\n  let path = CONFIG.GITHUB.access_token_url;\n  const params = {\n    client_id: CONFIG.GITHUB.client_id,\n    client_secret: CONFIG.GITHUB.client_secret,\n    code: code,\n  };\n  // console.log(code);\n  fetch(path, {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json', \n    },\n    body: JSON.stringify(params),\n  })\n    .then(res1 => {\n      return res1.text();\n    })\n    .then(body => {\n      const args = body.split('&');\n      let arg = args[0].split('=');\n      const access_token = arg[1];\n      // console.log(\"body:\",body);\n      console.log('access_token:', access_token);\n      return access_token;\n    })\n    .then(async token => {\n      const url = CONFIG.GITHUB.user_url + '?access_token=' + token;\n      console.log('url:', url);\n      await fetch(url)\n        .then(res2 => {\n          console.log('res2 :', res2);\n          return res2.json();\n        })\n        .then(response => {\n          console.log('response ', response);\n          if (response.id) {\n            //验证用户是否已经在数据库中\n            User.findOne({ github_id: response.id })\n              .then(userInfo => {\n                // console.log('userInfo :', userInfo);\n                if (userInfo) {\n                  //登录成功后设置session\n                  req.session.userInfo = userInfo;\n                  responseClient(res, 200, 0, '授权登录成功', userInfo);\n                } else {\n                  let obj = {\n                    github_id: response.id,\n                    email: response.email,\n                    password: response.login,\n                    type: 2,\n                    avatar: response.avatar_url,\n                    name: response.login,\n                    location: response.location,\n                  };\n                  //注册到数据库\n                  let user = new User(obj);\n                  user.save().then(data => {\n                    // console.log('data :', data);\n                    req.session.userInfo = data;\n                    responseClient(res, 200, 0, '授权登录成功', data);\n                  });\n                }\n              })\n              .catch(err => {\n                responseClient(res);\n                return;\n              });\n          } else {\n            responseClient(res, 400, 1, '授权登录失败', response);\n          }\n        });\n    })\n    .catch(e => {\n      console.log('e:', e);\n    });\n};\n```\n\n[代码参考 user.js ](https://github.com/biaochenxuying/blog-node/blob/master/routes/user.js)\n\n\n至于拿到 github 的用户信息后，是注册到 user 表，还是保存到另外一张 oauth 映射表，这个得看自己项目的情况。\n\n从 github 拿到的用户信息如下图：\n\n![github-login.png](https://upload-images.jianshu.io/upload_images/12890819-58e182b3ee0f4362.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n最终效果：\n\n![github-logining.gif](https://upload-images.jianshu.io/upload_images/12890819-1a1fd5e2d4f63096.gif?imageMogr2/auto-orient/strip)\n\n参与文章：\n\n1. https://www.jianshu.com/p/a9c0b277a3b3\n\n2. https://blog.csdn.net/zhuming3834/article/details/77649960\n\n# 2. 如何设计第三方授权登录的用户表\n\n第三方授权登录的时候，第三方的用户信息是存数据库原有的 user 表还是新建一张表呢 ？\n\n答案：这得看具体项目了，做法多种，请看下文。\n\n**第三方授权登录之后，第三方用户信息一般都会返回用户唯一的标志 openid 或者 unionid 或者 id，具体是什么得看第三方，比如 github 的是 id**\n\n- **1. 直接通过 注册 的方式保存到数据库**\n\n第一种：如果网站 **没有** 注册功能的，直接通过第三方授权登录，授权成功之后，可以直接把第三的用户信息 **注册** 保存到自己数据库的 user 表里面。典型的例子就是 微信公众号的授权登录。\n\n第二种：如果网站 **有** 注册功能的，也可以通过第三方授权登录，授权成功之后，也可以直接把第三的用户信息 **注册** 保存到自己数据库的 user 表里面（但是密码是后端自动生成的，用户也不知道，只能用第三方授权登录），这样子的第三方的用户和原生注册的用户信息都在同一张表了，这种情况得看自己项目的具体情况。笔者的博客网站暂时就采用了这种方式。\n\n- **2. 增加映射表**\n\n现实中很多网站都有多种账户登录方式，比如可以用网站的注册 id 登录，还可以用手机号登录，可以用 QQ 登录等等。数据库中都是有映射关系，QQ、手机号等都是映射在网站的注册 id 上。保证不管用什么方式登录，只要去查映射关系，发现是映射在网站注册的哪个 id 上，就让哪个 id 登录成功。\n\n- **3. 建立一个 oauth 表，一个 id 列，记录对应的用户注册表的 id** \n\n建立一个 oauth 表，一个 id 列，记录对应的用户注册表的 id，然后你有多少个第三方登陆功能，你就建立多少列，记录第三方登陆接口返回的 openid；第三方登陆的时候，通过这个表的记录的 openid 获取 id 信息，如果存在通过 id 读取注册表然后用 session 记录相关信息。不存在就转向用户登陆/注册界面要用户输入本站注册的账户进行 openid 绑定或者新注册账户信息进行绑定。\n\n具体代码实践请参考文章：\n\n[1. 第三方登录用户信息表设计](https://blog.csdn.net/buyueliuying/article/details/86135737)\n\n[2.  浅谈数据库用户表结构设计，第三方登录](https://www.cnblogs.com/jiqing9006/p/5937733.html)\n\n\n# 4. 最后 \n\n>笔者的 github 博客地址：[https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog)\n\n如果您觉得这篇文章不错或者对你有所帮助，请给个赞或者星呗，你的点赞就是我继续创作的最大动力。\n\n> 微信公众号：**BiaoChenXuYing**\n> 分享 前端、后端开发等相关的技术文章，热点资源，随想随感，全栈程序员的成长之路。\n关注公众号并回复 **福利** 便免费送你视频资源，绝对干货。\n福利详情请点击：  [免费资源获取--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)\n\n![BiaoChenXuYing](https://upload-images.jianshu.io/upload_images/12890819-091ccce387e2ea34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "like_users": [{
+      "name": "jly",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-03-06T02:08:08.400Z",
+      "_id": "5c7f2f1ac4db5c04d6181666",
+      "id": "5c7f2b88c4db5c04d6181663"
+    }, {
+      "name": "1207915357",
+      "type": 2,
+      "introduce": "",
+      "avatar": "https://avatars0.githubusercontent.com/u/32265147?v=4",
+      "create_time": "2019-03-04T03:51:20.038Z",
+      "_id": "5c80d6f60305fb0a32440bb4",
+      "id": "5c7ca0b842b55e2ecc90976e"
+    }, {
+      "name": "xbmchina",
+      "type": 2,
+      "introduce": "",
+      "avatar": "https://avatars3.githubusercontent.com/u/14942293?v=4",
+      "create_time": "2019-03-02T14:15:19.930Z",
+      "_id": "5c84a9d00305fb0a32440bba",
+      "id": "5c7a8ff7f6ebf42bf648e674"
+    }, {
+      "name": "D.Luck",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-02-22T21:52:59.741Z",
+      "_id": "5c884d585cba0a1b169010f4",
+      "id": "5c706f3b65ccc85fa0125e98"
+    }, {
+      "name": "D.Luck",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-02-22T21:52:59.741Z",
+      "_id": "5c884d5d5cba0a1b169010f9",
+      "id": "5c706f3b65ccc85fa0125e98"
+    }, {
+      "name": "D.Luck",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-02-22T21:52:59.741Z",
+      "_id": "5c884d5e5cba0a1b169010ff",
+      "id": "5c706f3b65ccc85fa0125e98"
+    }, {
+      "name": "D.Luck",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-02-22T21:52:59.741Z",
+      "_id": "5c884d605cba0a1b16901106",
+      "id": "5c706f3b65ccc85fa0125e98"
+    }, {
+      "name": "D.Luck",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-02-22T21:52:59.741Z",
+      "_id": "5c884d615cba0a1b1690110e",
+      "id": "5c706f3b65ccc85fa0125e98"
+    }, {
+      "name": "D.Luck",
+      "type": 1,
+      "introduce": "",
+      "avatar": "user",
+      "create_time": "2019-02-22T21:52:59.741Z",
+      "_id": "5c884d625cba0a1b16901117",
+      "id": "5c706f3b65ccc85fa0125e98"
+    }],
+    "create_time": "2019-03-03T13:14:54.604Z",
+    "update_time": "2019-03-03T13:14:54.604Z",
+    "id": 43,
+    "__v": 0
+  }
+}

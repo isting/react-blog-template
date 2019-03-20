@@ -1,0 +1,70 @@
+{
+  "code": 0,
+  "message": "操作成功 ！",
+  "data": {
+    "meta": {
+      "views": 8,
+      "likes": 0,
+      "comments": 0
+    },
+    "keyword": ["前端优化", "首屏优化", "服务器优化"],
+    "desc": "首屏作为直面用户的第一屏，其重要性不言而喻，如何加快加载的速度是非常重要的一课，本文讲解的是：笔者对自己搭建的个人博客网站的速度优化的经历。",
+    "numbers": "11081",
+    "img_url": "https://upload-images.jianshu.io/upload_images/12890819-c6ef743c696cd696.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240",
+    "type": 1,
+    "state": 1,
+    "origin": 0,
+    "tags": [{
+      "_id": "5bf405e1245730373274df55",
+      "name": "react.js",
+      "desc": "react.js",
+      "create_time": "2018-11-20T13:02:25.360Z",
+      "update_time": "2018-11-20T13:02:25.360Z",
+      "id": 16,
+      "__v": 0
+    }, {
+      "_id": "5bf0141cbc1e7805eb83dba0",
+      "name": "webpack",
+      "desc": "webpack",
+      "create_time": "2018-11-17T13:14:04.852Z",
+      "update_time": "2018-11-17T13:14:04.852Z",
+      "id": 10,
+      "__v": 0
+    }, {
+      "_id": "5bf013a6bc1e7805eb83db97",
+      "name": "javaScript",
+      "desc": "javaScript",
+      "create_time": "2018-11-17T13:12:06.234Z",
+      "update_time": "2018-11-17T13:12:06.234Z",
+      "id": 1,
+      "__v": 0
+    }, {
+      "_id": "5c8cadaeb87b8a04f1860c9e",
+      "name": "performance",
+      "desc": "性能优化",
+      "create_time": "2019-03-16T08:02:54.388Z",
+      "update_time": "2019-03-16T08:02:54.388Z",
+      "id": 20,
+      "__v": 0
+    }],
+    "comments": [],
+    "category": [{
+      "desc": "javaScript",
+      "_id": "5bf014e8bc1e7805eb83dba7",
+      "name": "javaScript",
+      "create_time": "2018-11-17T13:17:28.907Z",
+      "update_time": "2018-11-17T13:17:28.907Z",
+      "id": 1,
+      "__v": 0
+    }],
+    "_id": "5c8ca2d3b87b8a04f1860c9a",
+    "title": "一次网站的性能优化之路 -- 天下武功，唯快不破",
+    "author": "biaochenxuying",
+    "content": "![](https://upload-images.jianshu.io/upload_images/12890819-c6ef743c696cd696.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n首屏作为直面用户的第一屏，其重要性不言而喻，如何加快加载的速度是非常重要的一课。\n\n本文讲解的是：笔者对自己搭建的个人博客网站的速度优化的经历。\n\n效果体验地址：[ http://biaochenxuying.cn](http://biaochenxuying.cn)\n\n# 1. 用户期待的速度体验\n\n2018 年 8 月，百度搜索资源平台发布的《百度移动搜索落地页体验白皮书 4.0 》中提到：**页面的首屏内容应在 1.5 秒内加载完成**。\n\n也许有人有疑惑：为什么是 1.5 秒内？哪些方式可加快加载速度？以下将为您解答这些疑问！\n\n移动互联网时代，用户对于网页的打开速度要求越来越高。百度用户体验部研究表明，页面放弃率和页面的打开时间关系如下图所示：\n\n![页面放弃率和页面的打开时间关系](https://upload-images.jianshu.io/upload_images/12890819-6fc8794f8694acfb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n根据百度用户体验部的研究结果来看，普通用户期望且能够接受的页面加载时间在 3 秒以内。若页面的加载时间过慢，用户就会失去耐心而选择离开，这对用户和站长来说都是一大损失。\n\n百度搜索资源平台有 “闪电算法” 的支持，为了能够保障用户体验，给予优秀站点更多面向用户的机会，“闪电算法”在 2017 年 10 月初上线。\n\n闪电算法 的具体内容如下：\n\n**移动网页首屏在 2 秒之内完成打开的，在移动搜索下将获得提升页面评价优待，获得流量倾斜；同时，在移动搜索页面首屏加载非常慢（3 秒及以上）的网页将会被打压。**\n\n# 2. 分析问题\n\n未优化之前，首屏时间居然大概要 7 - 10 秒，简直不要太闹心。\n\n![](https://upload-images.jianshu.io/upload_images/12890819-6b4894c8ee6020a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n![](https://upload-images.jianshu.io/upload_images/12890819-e9cb985bca8efcd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n开始分析问题，先来看下 network ：\n\n![](https://upload-images.jianshu.io/upload_images/12890819-d6730f25f400cc7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n主要问题：\n\n- **第一个文章列表接口用了 4.42 秒**\n- **其他的后端接口速度也不快**\n- **另外 js css 等静态的文件也很大，请求的时间也很长**\n\n我还用了 Lighthouse 来测试和分析我的网站。\n\n> Lighthouse 是一个开源的自动化工具，用于改进网络应用的质量。 你可以将其作为一个 Chrome 扩展程序运行，或从命令行运行。 为 Lighthouse 提供一个需要审查的网址，它将针对此页面运行一连串的测试，然后生成一个有关页面性能的报告。\n\n未优化之前：\n\n![image.png](https://upload-images.jianshu.io/upload_images/12890819-c427ff2fd6c23bec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n上栏内容分别是页面性能、PWA（渐进式 Web 应用）、可访问性（无障碍）、最佳实践、SEO 五项指标的跑分。\n\n下栏是每一个指标的细化性能评估。\n\n再看下 Lighthouse 对性能问题给出了可行的建议、以及每一项优化操作预期会帮我们节省的时间：\n\n![image.png](https://upload-images.jianshu.io/upload_images/12890819-f7a9eb3526a755b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n从上面可以看出，主要问题：\n\n- **图片太大**\n- **一开始图片就加载了太多** \n\n知道问题所在就已经成功了一半了，接下来便开始优化之路。\n\n\n![](https://upload-images.jianshu.io/upload_images/12890819-badeaef63e605bfb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n\n# 2. 优化之路\n\n网页速度优化的方法实在太多，本文只说本次优化用到的方法。\n\n## 2.1 前端优化\n\n本项目前端部分是用了 react 和 antd，但是 webpack 用的还是 3.8.X 。\n\n#### 2.1.1 webpack 打包优化\n\n因为 webpack4 对打包做了很多优化，比如 Tree-Shaking ，所以我用最新的 react-create-app 重构了一次项目，把项目升级了一遍，所有的依赖包都是目前最新的稳定版了，webpack 也升级到了 4.28.3 。\n\n用最新 react-create-app 创建的项目，很多配置已经是很好了的，笔者只修改了两处地方。\n\n- 1. 打包配置修改了 webpack.config.js 的这一行代码：\n\n```\n// Source maps are resource heavy and can cause out of memory issue for large source files.\nconst shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';\n\n// 把上面的代码修改为： \nconst shouldUseSourceMap = process.env.NODE_ENV === 'production' ? false : true;\n```\n\n生产环境下，打包去掉 SourceMap，静态文件就很小了，从 13M 变成了 3M 。\n\n- 2. 还修改了图片打包大小的限制，这样子小于 40K 的图片都会变成 base64 的图片格式。\n\n```\n{\n      test: [/\\.bmp$/, /\\.gif$/, /\\.jpe?g$/, /\\.png$/,/\\.jpg$/,/\\.svg$/],\n      loader: require.resolve('url-loader'),\n      options: {\n            limit: 40000, // 把默认的 10000 修改为 40000\n            name: 'static/media/[name].[hash:8].[ext]',\n      },\n }\n```\n\n\n#### 2.1.2 去掉没用的文件\n\n比如之前可能觉得会有用的文件，后面发现用不到了，注释或者删除，比如 reducers 里面的 home 模块。\n\n```\nimport { combineReducers } from 'redux'\nimport { connectRouter } from 'connected-react-router'\n// import { home } from './module/home'\nimport { user } from './module/user'\nimport { articles } from './module/articles'\n\nconst rootReducer = (history) => combineReducers({\n // home, \n  user,\n  articles,\n  router: connectRouter(history)\n})\n```\n\n#### 2.1.3 图片处理\n\n- 把一些静态文件再用 photoshop 换一种格式或者压缩了一下， 比如 logo 图片，原本 111k，压缩后是 23K。\n\n- 首页的文章列表图片，修改为懒加载的方式加载。\n\n之前因为不想为了个懒加载功能而引用一个插件，所以想自己实现，看了网上关于图片懒加载的一些代码，再结合本项目，实现了一个图片懒加载功能，加入了 **事件的节流（throttle）与防抖（debounce）**。\n\n代码如下：\n\n```\n// fn 是事件回调, delay 是时间间隔的阈值\nfunction throttle(fn, delay) {\n  // last 为上一次触发回调的时间, timer 是定时器\n  let last = 0,\n    timer = null;\n  // 将throttle处理结果当作函数返回\n  return function() {\n    // 保留调用时的 this 上下文\n    let context = this;\n    // 保留调用时传入的参数\n    let args = arguments;\n    // 记录本次触发回调的时间\n    let now = +new Date();\n\n    // 判断上次触发的时间和本次触发的时间差是否小于时间间隔的阈值\n    if (now - last < delay) {\n      // 如果时间间隔小于我们设定的时间间隔阈值，则为本次触发操作设立一个新的定时器\n      clearTimeout(timer);\n      timer = setTimeout(function() {\n        last = now;\n        fn.apply(context, args);\n      }, delay);\n    } else {\n      // 如果时间间隔超出了我们设定的时间间隔阈值，那就不等了，无论如何要反馈给用户一次响应\n      last = now;\n      fn.apply(context, args);\n    }\n  };\n}\n\n// 获取可视区域的高度\nconst viewHeight = window.innerHeight || document.documentElement.clientHeight;\n// 用新的 throttle 包装 scroll 的回调\nconst lazyload = throttle(() => {\n  // 获取所有的图片标签\n  const imgs = document.querySelectorAll('#list .wrap-img img');\n  // num 用于统计当前显示到了哪一张图片，避免每次都从第一张图片开始检查是否露出\n  let num = 0;\n  for (let i = num; i < imgs.length; i++) {\n    // 用可视区域高度减去元素顶部距离可视区域顶部的高度\n    let distance = viewHeight - imgs[i].getBoundingClientRect().top;\n    // 如果可视区域高度大于等于元素顶部距离可视区域顶部的高度，说明元素露出\n    if (distance >= 100) {\n      // 给元素写入真实的 src，展示图片\n      let hasLaySrc = imgs[i].getAttribute('data-has-lazy-src');\n      if (hasLaySrc === 'false') {\n        imgs[i].src = imgs[i].getAttribute('data-src');\n        imgs[i].setAttribute('data-has-lazy-src', true); // \n      }\n      // 前 i 张图片已经加载完毕，下次从第 i+1 张开始检查是否露出\n      num = i + 1;\n    }\n  }\n}, 1000);\n```\n\n> 注意：给元素写入真实的 src 了之后，把 data-has-lazy-src 设置为 true ，是为了避免回滚的时候再设置真实的 src 时，浏览器会再请求这个图片一次，白白浪费服务器带宽。\n\n![](https://upload-images.jianshu.io/upload_images/12890819-f5e314cd7ba66cd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n具体细节请看文件 [文章列表](https://github.com/biaochenxuying/blog-react/blob/master/src/components/articles/articles.js)\n\n## 2.2 后端优化\n\n后端用到的技术是 node、express 和 mongodb。\n\n后端主要问题是接口速度很慢，特别是文章列表的接口，已经是分页请求数据了，为什么还那么慢呢 ？\n\n所以查看了接口返回内容之后，发现返回了很多列表不展示的字段内容，**特别是文章内容都返回了，而文章内容是很大的，占用了很多资源与带宽，从而使接口消耗的时间加长**。\n\n![列表](https://upload-images.jianshu.io/upload_images/12890819-f4d6c258b69e9ce0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n从上图可以看出文章列表接口只要返回文章的 标题、描述、封面、查看数，评论数、点赞数和时间即可。\n\n所以把不需要给前端展示的字段注释掉或者删除。\n\n```\n// 待返回的字段\n      let fields = {\n        title: 1,\n        // author: 1,\n        // keyword: 1,\n        // content: 1,\n        desc: 1,\n        img_url: 1,\n        tags: 1,\n        category: 1,\n        // state: 1,\n        // type: 1,\n        // origin: 1,\n        // comments: 1,\n        // like_User_id: 1,\n        meta: 1,\n        create_time: 1,\n        // update_time: 1,\n      };\n```\n同样对其他的接口都做了这个处理。\n\n后端做了处理之后，所有的接口速度都加快了，**特别是文章列表接口，只用了 0.04 - 0.05 秒左右，相比之前的 4.3 秒，速度提高了 100 倍**，简直不要太爽， 效果如下：\n\n![image.png](https://upload-images.jianshu.io/upload_images/12890819-915be88fbe9ec915.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n此刻心情如下：\n\n![](https://upload-images.jianshu.io/upload_images/12890819-d474954d87feabcf.gif?imageMogr2/auto-orient/strip)\n\n\n## 2.3 服务器优化\n\n你以为前后端都优化一下，本文就完了 ？小兄弟，你太天真了，**重头戏在后头 ！**\n\n![](https://upload-images.jianshu.io/upload_images/12890819-b78c783751e5cb31.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n笔者服务器用了 nginx 代理。\n\n做的优化如下：\n\n- 隐藏 nginx 版本号\n\n一般来说，软件的漏洞都和版本相关，所以我们要隐藏或消除 web 服务对访问用户显示的各种敏感信息。\n\n如何查看 nginx 版本号？ 直接看 network 的接口或者静态文件请求的 Response Headers \b即可。\n\n没有设置之前，可以看到版本号，比如我网站的版本号如下：\n\n```\nServer: nginx/1.6.2\n```\n\n设置之后，直接显示 nginx 了，没有了版本号，如下：\n\n```\nServer: nginx\n```\n\n- 开启 gzip 压缩\n\nnginx 对于处理静态文件的效率要远高于 Web 框架，因为可以使用 gzip 压缩协议，减小静态文件的体积加快静态文件的加载速度、开启缓存和超时时间减少请求静态文件次数。\n\n笔者开启 gzip 压缩之后，请求的静态文件大小大约减少了 2 / 3 呢。\n\n```\ngzip on;\n#该指令用于开启或关闭gzip模块(on/off)\n\ngzip_buffers 16 8k;\n#设置系统获取几个单位的缓存用于存储gzip的压缩结果数据流。16 8k代表以8k为单位，安装原始数据大小以8k为单位的16倍申请内存\n\ngzip_comp_level 6;\n#gzip压缩比，数值范围是1-9，1压缩比最小但处理速度最快，9压缩比最大但处理速度最慢\n\ngzip_http_version 1.1;\n#识别http的协议版本\n\ngzip_min_length 256;\n#设置允许压缩的页面最小字节数，页面字节数从header头得content-length中进行获取。默认值是0，不管页面多大都压缩。这里我设置了为256\n\ngzip_proxied any;\n#这里设置无论header头是怎么样，都是无条件启用压缩\n\ngzip_vary on;\n#在http header中添加Vary: Accept-Encoding ,给代理服务器用的\n\ngzip_types\n    text/xml application/xml application/atom+xml application/rss+xml application/xhtml+xml image/svg+xml\n    text/javascript application/javascript application/x-javascript\n    text/x-json application/json application/x-web-app-manifest+json\n    text/css text/plain text/x-component\n    font/opentype font/ttf application/x-font-ttf application/vnd.ms-fontobject\n    image/x-icon;\n#进行压缩的文件类型,这里特别添加了对字体的文件类型\n\ngzip_disable \"MSIE [1-6]\\.(?!.*SV1)\";\n#禁用IE 6 gzip\n```\n把上面的内容加在 nginx 的配置文件 ngixn.conf 里面的 http 模块里面即可。\n\n是否设置成功，看文件请求的 Content-Encoding 是不是 gzip 即可。\n\n![](https://upload-images.jianshu.io/upload_images/12890819-092240d63c0f469e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n- 设置 expires，设置缓存\n\n```\n server {\n        listen       80;\n        server_name  localhost;\n        location  / {\n            root   /home/blog/blog-react/build/;\n            index  index.html;\n            try_files $uri $uri/ @router;\n            autoindex on;\n            expires 7d; # 缓存 7 天\n        }\n    }\n```\n\n我重新刷新请求的时候是 2019 年 3 月 16 号，是否设置成功看如下几个字段就知道了：\n\n![](https://upload-images.jianshu.io/upload_images/12890819-324f8229ee54440c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n1. Staus Code 里面的 form memory cache 看出，文件是直接从本地浏览器本地请求到的，没有请求服务器。\n2. Cache-Control 的 max-age= 604800 看出，过期时间为 7 天。\n3. Express 是 2019 年 3 月 23 号过期，也是 7 天过期。\n\n> 注意：上面最上面的用红色圈中的 Disable cache 是否是打上了勾，打了勾表示：浏览器每次的请求都是请求服务器，无论本地的文件是否过期。所以要把这个勾去掉才能看到缓存的效果。\n\n3 4. 优化结果\n\n#### 3.1 测试场景\n\n一切优化测试的结果脱离了实际的场景都是在耍流氓，而且不同时间的网速对测试结果的影响也是很大的。\n\n所以笔者的测试场景如下：\n\n- a. 笔者的服务器是阿里的，配置是入门级的学生套餐配置，如下：\n\n![服务器配置](https://upload-images.jianshu.io/upload_images/12890819-bde4a529183ff1f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n- b. 测试网络为 10 M 光纤宽带。\n\n#### 3.2 优化结果\n\n**优化之后的首屏速度是 2.07 秒。**\n\n![](https://upload-images.jianshu.io/upload_images/12890819-befa6b7c01219e5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n**最后加了缓存的结果为 0.388 秒**。\n\n![image.png](https://upload-images.jianshu.io/upload_images/12890819-7ae2673d65cd6a0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n再来看下 Lighthouse 的测试结果：\n\n![image.png](https://upload-images.jianshu.io/upload_images/12890819-c89d85fe22d27f8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n比起优化之前，各项指标都提升了很大的空间。\n\n\n# 4. 最后 \n\n> 优化之路漫漫，永无止境，天下武功，唯快不破。\n\n本次优化的前端与后端项目，都已经开源在 github 上了，欢迎围观。\n\n前端：[https://github.com/biaochenxuying/blog-react](https://github.com/biaochenxuying/blog-react)\n\n后端：[https://github.com/biaochenxuying/blog-node](https://github.com/biaochenxuying/blog-node)\n\ngithub 博客地址：[https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog)\n\n如果您觉得这篇文章不错或者对你有所帮助，请给个赞或者星呗，你的点赞就是我继续创作的最大动力。\n\n关注公众号并回复 **福利** 可领取免费学习资料，福利详情请猛戳：  [免费资源获取--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)\n\n![BiaoChenXuYing](https://upload-images.jianshu.io/upload_images/12890819-0fc16a9e50276521.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)\n\n\n",
+    "like_users": [],
+    "create_time": "2019-03-16T07:16:35.706Z",
+    "update_time": "2019-03-16T07:16:35.706Z",
+    "id": 44,
+    "__v": 0
+  }
+}
